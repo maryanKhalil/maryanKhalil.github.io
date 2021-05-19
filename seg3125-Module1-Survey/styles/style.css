@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to bottom right,#D8BFD8,#E6E6FA);
+    background-image: linear-gradient(#D8BFD8,#E6E6FA);
     text-align: center;
     margin-bottom: 0px;
 }
@@ -77,7 +77,7 @@ select, textarea */
     font-family: inherit;
     padding: 10px;
     display: block;
-    width: 100%;
+    width: 95%;
     border-color: #62b3d3;
     font-size: 15px;
 }
