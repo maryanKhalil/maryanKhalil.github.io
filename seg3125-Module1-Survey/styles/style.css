@@ -1,39 +1,64 @@
 body{
-    background-color: #EEE;
-    margin-left: 10px;
-    margin-right: 10px;
+    background-image: linear-gradient(to bottom right,#b7d0f3,#6d91c4);
     text-align: center;
+    margin-bottom: 0px;
 }
+
 #content{
-    background-color: white;
+    text-align: inline-block;
+    font-size: 100%;
+    color: rgb(46, 44, 44);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #header{
-    color:black;
+  
     text-align: center;
+    font-size: larger;
+    color:black;
+    font-family: arial, sans-serif;
+    padding-left: 10px;
+    
 }
 
 #footer{
     clear: both;
     padding: 10px 0px 10px 0px;
-    background-color: #999;
-    color: white;
-    text-align: right;
-    font-family: italic;
+    color:black;
+    text-align: left;
+    font-family: italic, sans-serif;
+    font-size: large;
+    
+    
 }
+
 #images{
 text-align: center;
 padding: 10px;
+border-color:#60a8e2;
+border-style:solid;
+margin: 10px;
+margin-bottom:35px; ;
 }
-
-h1{
-    margin:0;
-}   
+a{
+   color:#0f90fa; 
+}
+    
+form{
+    background-color:white;
+    width: 900px;
+    display: inline-block;
+    border-radius: 5px;  
+    font-size: x-large; 
+}
 
 /* Styling form-control Class */
 .form-control {
+    
     text-align: left;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 20px;
 }
 
 /* Styling form-control Label */ 
@@ -47,12 +72,13 @@ select, textarea */
 .form-control input,
 .form-control select,
 .form-control textarea {
-    border: 1px solid #777;
-    border-radius: 2px;
+    border: 2px solid;
+    border-radius: 5px;
     font-family: inherit;
     padding: 10px;
     display: block;
     width: 95%;
+    border-color: #62b3d3;
 }
 
 /* Styling form-control Radio 
@@ -61,17 +87,22 @@ button and Checkbox */
 .form-control input[type="checkbox"] {
     display: inline-block;
     width: auto;
+    border:1px #62b3d3 ;
+    
 }
 
 /* Styling Button */
 button {
-    background-color: #05c46b;
-    border: 1px solid #777;
-    border-radius: 2px;
+    background-color: #60a5ee;
+    border: 1px solid #999;
+    border-radius: 20px;
     font-family: inherit;
     font-size: 21px;
-    display: block;
+    display:block;
     width: 50%;
+    padding: 5px 5px 5px 5px;
     margin-top: 50px;
     margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
