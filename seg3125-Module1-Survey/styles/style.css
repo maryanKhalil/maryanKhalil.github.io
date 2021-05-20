@@ -1,41 +1,48 @@
 body{
-    background-image: linear-gradient(#D8BFD8,#E6E6FA);
+    background-image: white;
     text-align: center;
-    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
 }
 
 #content{
     text-align: inline-block;
-    font-size: 100%;
+    font-size: 150%;
     color: rgb(46, 44, 44);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Arial, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 10px;
 }
 
 #header{
-  
+   background-image: url("../images/Nike\ White\ Background\ Grey\ nike\ logo\ askfm\ background\ \ \ random.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+  /* background: #c3c7d4; */
+   /* background: rgb(192, 191, 191); */
+  color:black;
+    font-size: 60px;
     text-align: center;
     font-size: larger;
-    color:black;
-    font-family: arial, sans-serif;
-    padding-left: 10px;
-    
+    padding: 35px;
+    font-family: 'Calibri', sans-serif; 
 }
 
 #footer{
     clear: both;
+    background:black;
     padding: 10px 0px 10px 0px;
-    color:black;
+    color:white;
     text-align: center;
     font-family: italic, sans-serif;
     font-size: large;
 }
 
 #images{
-text-align: center;
-padding: 10px;
-border-color:#60a8e2;
-border-style:solid;
-margin: 10px;
+display: flex;
+justify-content: center;
+/*border-color:#60a8e2;*/
+/*border-style:solid;*/
 margin-bottom:35px; ;
 }
 a{
@@ -45,6 +52,7 @@ a{
 form{
     background-color:white;
     width: 900px;
+    text-align: center;
     font-family: sans-serif;
     display: inline-block;
     border-radius: 10px;  
