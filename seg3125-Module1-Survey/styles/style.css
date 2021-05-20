@@ -28,8 +28,6 @@ body{
     text-align: center;
     font-family: italic, sans-serif;
     font-size: large;
-    
-    
 }
 
 #images{
@@ -49,7 +47,7 @@ form{
     width: 900px;
     font-family: sans-serif;
     display: inline-block;
-    border-radius: 5px;  
+    border-radius: 10px;  
     font-size: large; 
 }
 
@@ -65,6 +63,8 @@ form{
 .form-control label {
     display: block;
     margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 /* Styling form-control input, 
@@ -88,7 +88,6 @@ button and Checkbox */
 .form-control input[type="checkbox"] {
     display: inline-block;
     width: auto;
-    border:5px #62b3d3 ;
     margin-left: 20px;
 }
 
