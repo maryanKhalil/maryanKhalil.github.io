@@ -1,6 +1,9 @@
 
 // This function is called when any of the tab is clicked
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+const allItems = restrictListProducts(products)
+renderProductList(allItems)
+
 
 function openInfo(evt, tabName) {
 
@@ -21,45 +24,30 @@ function openInfo(evt, tabName) {
 	evt.currentTarget.className += " active";
 
 }
-
-
 	
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
-function populateListProductChoices(slct1, slct2) {
+function populateListProductChoices(slct1) {
     var s1 = document.getElementById(slct1);
-    var s2 = document.getElementById(slct2);
+    var s2 = document.getElementById('displayProduct');
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-		
+	
+	if (selectedRestrictions.has(s1.value)) {
+		selectedRestrictions.delete(s1.value)
+	  } else {
+		selectedRestrictions.add(s1.value)
+	  }
+
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
-		
-	for (i = 0; i < optionArray.length; i++) {
-			
-		var productName = optionArray[i];
-		// create the checkbox and add in HTML DOM
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "product";
-		checkbox.value = productName;
-		s2.appendChild(checkbox);
-		
-		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
-		s2.appendChild(label);
-		
-		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));    
-	}
+	renderProductList(optionArray)
 }
 	
 // This function is called when the "Add selected items to cart" button in clicked
@@ -91,3 +79,34 @@ function selectedItems(){
 	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
 		
 }
+
+function priceFilter(a,b){
+	return a.price > b.price ? 1:-1;
+}
+
+function renderProductList(optionArray){
+	var s2 = document.getElementById('displayProduct');
+	const sortedOptionArray = optionArray.sort(priceFilter);
+	for (i = 0; i < sortedOptionArray.length; i++) {
+  
+	  var productName = sortedOptionArray[i].name;
+	  var productPrice = sortedOptionArray[i].price;
+	  // create the checkbox and add in HTML DOM
+	  var checkbox = document.createElement("input");
+	  checkbox.type = "checkbox";
+	  checkbox.name = "product";
+	  checkbox.value = productName;
+	  s2.appendChild(checkbox);
+  
+	  formattedPrice = (Math.round(productPrice * 100) / 100).toFixed(2);
+  
+	  // create a label for the checkbox, and also add in HTML DOM
+	  var label = document.createElement('label')
+	  label.htmlFor = productName;
+	  label.appendChild(document.createTextNode(`${productName} - $${formattedPrice}`));
+	  s2.appendChild(label);
+  
+	  // create a breakline node and add in HTML DOM
+	  s2.appendChild(document.createElement("br"));
+	}
+  }
