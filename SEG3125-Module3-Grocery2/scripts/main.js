@@ -19,7 +19,7 @@ function openInfo(evt, tabName) {
 	}
 
 	// Show the current tab, and add an "active" class to the button that opened the tab
-	document.getElementById(tabName).style.display = "block";
+	document.getElementById(tabName).style.display = "flex";
 	evt.currentTarget.className += " active";
 
 }
@@ -75,8 +75,9 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)+ " $"));
 		
+    openInfo(event,"Cart");
 }
 
 function priceFilter(a,b){
@@ -87,25 +88,45 @@ function renderProductList(optionArray){
 	var s2 = document.getElementById('displayProduct');
 	const sortedOptionArray = optionArray.sort(priceFilter);
 	for (i = 0; i < sortedOptionArray.length; i++) {
-  
+
+		var label = document.createElement('label');
+		label.className = "option_item";
+
 	  var productName = sortedOptionArray[i].name;
 	  var productPrice = sortedOptionArray[i].price;
-	  // create the checkbox and add in HTML DOM
+		var productPicture = sortedOptionArray[i].picture;
+
 	  var checkbox = document.createElement("input");
 	  checkbox.type = "checkbox";
+		checkbox.className = "checkbox";
 	  checkbox.name = "product";
 	  checkbox.value = productName;
-	  s2.appendChild(checkbox);
-  
-	  formattedPrice = (Math.round(productPrice * 100) / 100).toFixed(2);
-  
-	  // create a label for the checkbox, and also add in HTML DOM
-	  var label = document.createElement('label')
-	  label.htmlFor = productName;
-	  label.appendChild(document.createTextNode(`${productName} - $${formattedPrice}`));
+
+		label.appendChild(checkbox);
+		formattedPrice = (Math.round(productPrice * 100) / 100).toFixed(2);
+
+		var optioninner = document.createElement("div");
+		optioninner.className = "option_inner nutfree";
+		var tick = document.createElement("div");
+		tick.className = "tickmark";
+		var icon = document.createElement("div");
+		icon.className = "icon";
+		var productImage = document.createElement("img");
+		productImage.src = productPicture;
+		productImage.alt = "";
+		icon.appendChild(productImage);
+		var prodtext = document.createElement("div");
+		prodtext.className = "boxtext";
+		var h2 = document.createElement("h2");
+		h2.appendChild(document.createTextNode(`${productName} - $${formattedPrice}`));
+		prodtext.appendChild(h2);
+		optioninner.appendChild(tick);
+		optioninner.appendChild(icon);
+		optioninner.appendChild(prodtext);
+
+		label.appendChild(optioninner);
 	  s2.appendChild(label);
-  
-	  // create a breakline node and add in HTML DOM
+
 	  s2.appendChild(document.createElement("br"));
 	}
   }

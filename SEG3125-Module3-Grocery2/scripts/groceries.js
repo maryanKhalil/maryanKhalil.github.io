@@ -6,98 +6,136 @@ const selectedRestrictions = new Set()
 
 var products = [
 	{
-		name: "brocoli",
+		name: "Brocoli",
+        picture : "images/broccoli.jpeg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		price: 1.99
 	},
 	{
-		name: "bread",
+		name: "Bread",
+        picture : "images/bread.jpeg",
 		LactoseFree: false,
 		NutFree: false,
 		isOrganic:true,
 		price: 2.35
 	},
 	{
-		name: "salmon",
+		name: "Salmon",
+        picture : "images/salmon.jpeg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		price: 10.00
 	},
 	{
-		name: "apple",
+		name: "Apple",
+        picture : "images/apple.jpeg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
 		price: 1.79
 	},
 	{
-		name: "milk",
+		name: "Milk",
+        picture : "images/milk.jpeg",
 		LactoseFree: false,
 		NutFree: true,
 		isOrganic:true,
 		price: 8.50
 	},
 	{
-		name: "almonds",
+		name: "Almonds",
+        picture : "images/almonds.jpeg",
 		LactoseFree: true,
 		NutFree: false,
 		isOrganic:true,
 		price: 2.00
 	},
 	{
-		name: "rice",
+		name: "Rice",
+        picture : "images/rice.jpeg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
 		price: 13.00
 	},
 	{
-		name: "honey",
+		name: "Honey",
+        picture : "images/honey.jpeg",
 		LactoseFree: true,
 		NutFree: false,
 		isOrganic:false,
 		price: 5.99
 	},
 	{
-		name: "avacado",
+		name: "Avacado",
+        picture : "images/avacodo.jpeg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
 		price: 3.99
 	},
 	{
-		name: "strawberry",
+		name: "Strawberry",
+        picture : "images/strawberry.jpeg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		price: 2.30
+	},
+    {
+		name: "Cookie",
+        picture : "images/cookie.jpeg",
+		LactoseFree: true,
+		NutFree: true,
+		isOrganic:true,
+		price: 3.30
+	},
+    {
+		name: "Naan",
+        picture : "images/naan.jpeg",
+		LactoseFree: false,
+		NutFree: true,
+		isOrganic:false,
+		price: 4.30
+	},
+    {
+		name: "Samosa",
+        picture : "images/samosa.jpeg",
+		LactoseFree: false,
+		NutFree: true,
+		isOrganic:false,
+		price: 4.30
+	},
+    {
+		name: "Yogurt",
+        picture : "images/yogurt.jpeg",
+		LactoseFree: false,
+		NutFree: true,
+		isOrganic:false,
+		price: 4.30
+	},
+    {
+		name: "Chicken",
+        picture : "images/chicken.jpeg",
+		LactoseFree: true,
+		NutFree: true,
+		isOrganic:true,
+		price: 15.99
+	},
+    {
+		name: "Noodles",
+        picture : "images/noodle.jpeg",
+		LactoseFree: true,
+		NutFree: true,
+		isOrganic:true,
+		price: 5.99
 	}
-	
+
 ];
 	
-
-
-// given restrictions provided, make a reduced list of products
-// prices should be included in this list, as well as a sort based on price
-
-// function restrictListProducts(prods, restriction) {
-// 	let product_names = [];
-// 	for (let i=0; i<prods.length; i+=1) {
-// 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-// 			product_names.push(prods[i].name);
-// 		}
-// 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-// 			product_names.push(prods[i].name);
-// 		}
-// 		else if (restriction == "None"){
-// 			product_names.push(prods[i].name);
-// 		}
-// 	}
-// 	return product_names;
-// }
 function restrictListProducts(prods) {
 	let filteredProducts = [];
 	for (let i = 0; i < prods.length; i += 1) {
@@ -110,6 +148,7 @@ function restrictListProducts(prods) {
 	  if ((selectedRestrictions.has("Organic")) && (prods[i].isOrganic == false)){
 		continue;
 	  }
+     
 	  filteredProducts.push(prods[i]);
 	}
 	return filteredProducts;

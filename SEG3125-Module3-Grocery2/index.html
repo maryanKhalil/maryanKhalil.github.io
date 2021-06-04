@@ -2,58 +2,96 @@
 <html>
 <head>
 	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
-	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<link href="styles/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <div id="header">
-    <h1>Wallgreens</h1>
-  </div>
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+    <h1>Wallgreens</h1>
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Personal Settings</button>
   <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+
 </div>
 
 <!-- Tab content -->
-<div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-	Choose your dietary preferences:
-  <br>
-    <br>
-    <input type="checkbox" id="lactose-free" name="lactose-free" value="Lactose-Free" onchange="populateListProductChoices(this.id)">
-    <label for="lactose-free">Lactose-Free</label><br>
-    <input type="checkbox" id="nut-free" name="nut-free" value="Nut-Free" onchange="populateListProductChoices(this.id)">
-    <label for="nut-free">Nut-Free</label><br>
-    <input type="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
-    <label for="organic">Organic</label><br>
-    <br>
-</div>
+<div class="wrapper">
+	<div id="homepage" class="tabcontent">
+		<div id="info" class="introduction">
+			<h3>Welcome to Wallgreens!</h3>
+			<br>
+			<p>At Wallgreens, we offer different food categories such as Lactose-free, Nut-free and Organic food.</p>
+ 			<p>Please use the 3 options provided in the menu to set your personal food restrictions, choose your grocery items and check your cart. Thank you for shopping wih us!</p>
+		</div>
+	</div>
+  <div id="Client" class="tabcontent">
+		<div id="info" class="introduction">
+			<h3>Client Information</h3><br>
+			<p>Do you have any food <br> restrictions?<small>Select all that apply.</small></p><br>
+			<p><small>(if you have no restrictions move on to products)</small></p>
+		</div>
+    <label class="option_item">
+      <input type="checkbox" class="checkbox" id="lactose-free" name="lactose-free" value="Lactose-Free" onchange="populateListProductChoices(this.id)">
+      <div class="option_inner lactosefree">
+        <div class="tickmark"></div>
+        <div class="icon"><img src="images/lactosefree.jpeg" alt=""></div>
+				<div class="boxtext">
+          <h2>Lactose-Free</h2>
+        </div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" class="checkbox" id="nut-free" name="nut-free" value="Nut-Free" onchange="populateListProductChoices(this.id)">
+      <div class="option_inner nutfree">
+        <div class="tickmark"></div>
+        <div class="icon"><img src="images/nutfree.jpeg" alt=""></div>
+				<div class="boxtext">
+          <h2>Nut-Free</h2>
+        </div>
+      </div>
+    </label>
+    <label class="option_item">
+      <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+      <div class="option_inner organic">
+        <div class="tickmark"></div>
+        <div class="icon"><img src="images/organic.jpeg" alt=""></div>
+				<div class="boxtext">
+          <h2>Organic</h2>
+        </div>
+      </div>
+    </label>
+  </div>
 
-<div id="Products" class="tabcontent">
-  <h3>Your targeted products</h3>
-  <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:<br/>
-   <br/>
-	<div id="displayProduct"></div>
-   <br/>
+	<div id="Products" class="tabcontent">
+		<div id="prod" class="introduction">
+			<h3>Your targeted products</h3><br>
+ 			<p>We preselected products based on your restrictions</p>
+ 				Choose items to buy:
+		</div>
+	<div id="displayProduct" class="displayProd"></div>
+	 <br/>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
+		<b>Add selected items to cart</b>
 	</button>
+	</div>
+
+	<div id="Cart" class="tabcontent">
+		<div id="checkout" class="introduction">
+			<h3>Cart</h3>
+		  <p>Here is your cart.</p>
+			<div id="displayCart"></div>
+		</div>
+		<br>
+	</div>
+
 </div>
 
-<div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
-  <br/>
-  <div id="displayCart"></div>
-</div>
-
-<div id="footer">
+<footer>
   Website Designed by Maryan Khalil
-</div>
+</footer>
+
+
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
 
