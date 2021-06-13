@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(../assets/Gilroy-Regular.ttf);
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: Gilroy;
+    src: url(../assets/Gilroy-SemiBold.ttf);
+    font-weight: 700;
+  }
+  
+  
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Gilroy';
+    color: #222222;
+    font-size: x-large;
+  }
+  
+  h1 {
+    font-weight: 700;
+  }
+  
+  .light {
+    color: white;
+  }
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/dog+cathero4.jpg');
+    height: 100vh;
+    color: white;
+    background-position: 50% 50%;
+  }
+  
+  .btn {
+    border-radius: 32px;
+    padding: 10px 20px;
+  }
+  
+  section {
+    padding: 64px 0px;
+  }
+  
+  img {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  footer{
+      font-family: italic;
+      text-align: center;
+      height: 50px;
+
+  }
