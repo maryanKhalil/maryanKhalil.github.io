@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: Gilroy;
     src: url(../assets/Gilroy-Regular.ttf);
     font-weight: 400;
@@ -8,7 +8,7 @@
     font-family: Gilroy;
     src: url(../assets/Gilroy-SemiBold.ttf);
     font-weight: 700;
-  }
+  } */
   
   
   body {
@@ -22,21 +22,28 @@
 
   nav
 {
-  background-color: #a36a47b9;
+  background-color: #726f6f;
+  /* background-color: #a36a47b9; */
   /* background-color: #d2b48c; */
   position: absolute; 
   top: 0.5; 
   width: 100%; 
-  height: 12%;
+  height: 8%;
 }
 
   h1 {
     font-weight: 700;
   }
+
+  a:hover { 
+    background-color: #a9a9a9;
+    border-radius : 3px;
+  }
   
   img.resize{
-    max-width: 20%;
-    max-height: 10%;
+    max-width: 13%;
+    padding-top: 20px;
+    
   }
    img.size{
     height: 30;
@@ -53,7 +60,7 @@
     width: 100%;
     padding-top: 150px;
     padding-bottom: 100px;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/dog+cathero4.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/heroimage2.jpg');
     height: 100vh;
     color: white;
     background-position: 50% 50%;
@@ -71,13 +78,13 @@
     margin-bottom: 24px;
     width: 100%;
   }
-  footer{
+  #footer{
     left: 0;
     position: absolute;
     bottom: -1220;
     width: 100%;
     padding: 10px 10px;
-    background-color: gray;
+    background-color:rgb(56, 55, 55);
     color: white;
     text-align: center;
 
