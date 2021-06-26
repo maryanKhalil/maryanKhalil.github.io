@@ -11,13 +11,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="scripts/services.js"></script>
+  <script src="scripts/booking.js"></script>
 </head>
 
 
@@ -25,7 +24,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <h1>
-        <img class= "resize" src="images/logo.png" width="50" height="70"> <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-size: 40px;">Findlay Creek Animal Hospital</a>
+        <img class= "resize" src="images/logo.png" width="50" height="70"> <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-size: 35px;">Findlay Creek Animal Hospital</a>
       </h1>
       <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: black;">
         Menu
@@ -34,16 +33,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger light" href="#about" style="font-size: 25px; color: white;">About</a>
+            <a class="nav-link js-scroll-trigger light" href="#about" style="font-size: 23px; color:white;"><i class="bi bi-info-circle-fill"></i> About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger light" href="#services" style="font-size: 25px; color:white;">Services</a>
+            <a class="nav-link js-scroll-trigger light" href="#services" style="font-size: 23px; color:white;"><i class="bi bi-bag-plus-fill"></i> Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger light" href="#people" style="font-size: 25px;color: white;">Team</a>
+            <a class="nav-link js-scroll-trigger light" href="#people" style="font-size: 23px;color: white;"><i class="bi bi-people-fill"></i> Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger light" href="#book" style="font-size: 25px;color: white;">Book</a>
+            <a class="nav-link js-scroll-trigger light" href="#book" style="font-size: 23px;color: white;"><i class="bi bi-calendar-check-fill"></i> Book</a>
           </li>
         </ul>
       </div>
@@ -68,8 +67,8 @@
   <section class="about" id="about">
     <div class="container">
       <div class="section-heading text-center">
-        <h2>About Us</h2>
-        <p class="text-muted">Founded in 2020, our main priority is and will always be our customers and their furry buddies.</p>
+        <h2><i class="bi bi-info-circle-fill"></i> About Us</h2>
+        <p class="text-muted">Founded in 2020, our main priority is and will always be our customers and their furry buddies. Beyond first-rate pet care, we make our clinic comfortable, kid-friendly, and calm, so your pet can relax in the waiting room and look forward to meeting our Ottawa veterinarian.</p>
         <hr>
       </div>
       <div class="row">
@@ -108,8 +107,8 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-heading text-center">
-        <h2><i class="bi bi-clipboard-check"></i> Services</i></h2>
-        <p class="text-muted">We are a full-service hospital and welcome both emergency treatment cases as well as pet patients in need of routine medical, surgical and dental care. Check our services out below.</p>
+        <h2><i class="bi bi-bag-plus-fill"></i> Services</i></h2>
+        <p class="text-muted">We are a full-service hospital and welcome both emergency treatment cases as well as pet patients in need of routine medical, surgical and dental care. <br><b>Check our services out below.</b><br></p>
         <hr>
       </div>
       <div class="row">
@@ -118,23 +117,23 @@
             <div class="row">
               <div class="col-lg-4">
                 <div class="feature-item">
-                  <img src="images/vaccine.jpg">
+                  <img class ="size" src="images/vaccine.jpg">
                   <h3>Vaccines ($30)</h3>
-                  <p class="text-muted"></p>
+                  <p class="text-muted">Vaccines administer a very low dose of a pathogen to a pet, so that their immune system can “learn” to fight it. </p>
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="feature-item">
-                  <img src="images/surgry.jpg">
+                  <img class ="size" src="images/surgery.jpg">
                   <h3>Surgery ($750)</h3>
-                  <p class="text-muted"></p>
+                  <p class="text-muted">From routine procedures, such as spaying or neutering, to more advanced operations, your pet may need to undergo surgery for any number of reasons. </p>
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="feature-item">
-                  <img src="images/radiography.jpg">
+                  <img class ="size" src="images/radiology.jpg">
                   <h3>Radiology ($500)</h3>
-                  <p class="text-muted"></p>
+                  <p class="text-muted">Our veterinary staff can rapidly diagnose your pet’s injury or condition via x-rays, CT scans, MRIs and ultrasound imaging.</p>
                 </div>
               </div>
             </div>
@@ -147,23 +146,23 @@
             <div class="row">
               <div class="col-lg-4">
                 <div class="feature-item">
-                  <img src="images/euthanasia.jpg">
+                  <img class ="size" src="images/sick.jpg">
                   <h3>Euthunasia ($300)</h3>
-                  <p class="text-muted"></p>
+                  <p class="text-muted">Euthanasia is something most people would rather not think about, unfortunately, pets become old and ill, and when they appear to be suffering, sometimes pet euthanasia is the most caring and compassionate thing a pet owner can do for their pet.</p>
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="feature-item">
-                  <img src="images/dental.jpg">
+                  <img class ="size" src="images/Dental.jpg">
                   <h3>Dental ($600)</h3>
-                  <p class="text-muted"></p>
+                  <p class="text-muted">Pet dental checkups include an examination of your pet’s head, neck, face, ears and mouth in order to check for signs of health problems.</p>
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="feature-item">
-                  <img src="images/trim+wash">
+                  <img class ="size" src="images/labradorretrievergrooming.jpg">
                   <h3>Medical Grooming($35)</h3>
-                  <p class="text-muted"></p>
+                  <p class="text-muted">Medical Pet grooming may be necessary for your furry companions healthy. A good trim may help our pet veterinarian discover a growth or sore that might have otherwise gone undetected.</p>
                 </div>
               </div>
             </div>
@@ -193,7 +192,7 @@
               </div>
               <div class="col-lg-4">
                 <div class="feature-item">
-                  <img src="images/george.webp">
+                  <img src="images/dr-keith-kremer.jpg">
                   <h3>Dr. George</h3>
                   <p class="text-muted">Dr. George Starke grew up in Ottawa and attended the University of Ottawa where he received his undergraduate degree in animal studies. Later, he attened the university of Calgary where his obtained two graduated degress in Vertebrate Biology and his DVM. He currently has one pet, a pine snake named Peaches. </p>
                 </div>
@@ -202,7 +201,7 @@
                 <div class="feature-item">
                   <img src="images/sara.jpg">
                   <h3>Dr. Sara</h3>
-                  <p class="text-muted">Dr. Sara Tang received her undergraduate degree at Toronto University with a major in Biological Science. She discovered a love for animals at an early age while working at a veternary clinic during her summers. She contninued her studies and graduated with honors from Gulph University in 2016. She has one pet, a golden Labrador named buddy. </p>
+                  <p class="text-muted">Dr. Sara Tang received her undergraduate degree at Guelph University with a major in Biological Science and doctorat in veterinary medicine. She discovered a love for animals at an early age while working at a veternary clinic during her summers.She has one pet, a golden Labrador named buddy. </p>
                 </div>
               </div>
             </div>
@@ -216,82 +215,81 @@
   <section class="book" id="book">
     <div class="container">
       <div class="section-heading text-center">
-        <h2><i class="bi bi-journal-plus"></i> Booking </h2>
+        <h2><i class="bi bi-calendar-check-fill"></i> Booking </h2>
         <p class="text-muted">Ready to schedule with us? Fill out the following form below and we will get back to you in less than 4 hours.</p>
         <hr>
       </div>
-      <form>
+      <form onsubmit="confirmBooking()">
         <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Full name</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputEmail3" placeholder="Please enter your full name">
-          </div>
+          <label for="inputname1" class="form-label"> <b>Owner's First Name</b></label>
+          <input type="text" class="form-control" id="fname" pattern="[a-zA-Z- ]+" title="Your First name is required" placeholder="Please enter your First Name"required>  
         </div>
         <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Please enter your email">
-            </div>
+          <label for="inputname2" class="form-label"><b>Owner's Last Name</b></label>
+          <input type="text" class="form-control" id="lname" pattern="[a-zA-Z- ]+" title="Your Last name is required" placeholder="Please enter your Last Name" required>
+        </div>
+        <div class="form-group row">
+          <label for="inputname1" class="form-label" class="col-sm-2 col-form-label"> <b>Pet's Name</b></label>
+          <input type="text" class="form-control" id="petname" pattern="[a-zA-Z- ]+" title="Your Pet's name is required" placeholder="Please enter your Pet's Name"required>
+        </div>
+      <div class="form-group row">
+        <label for="inputpet2" class="form-label" class="col-sm-2 col-form-label"> <b>Pet's Breed</b></label>
+          <input type="text" class="form-control" id="petbreed" pattern= "[a-zA-z- ]+" title="Your Pet's Breed is required" placeholder="Please enter your Pet's Breed" required>
+      </div>
+        <div class="form-group row">
+          <label for="inputEmail" class="form-label" class="col-sm-2 col-form-label"><b>Email</b></label>
+          <input type="email" class="form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Your email address is required" placeholder="Please enter your Email" required>
           </div>
           <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Pet's name</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Please enter your pet's name">
+            <label for="phone" class="form-label"><b>Number</b></label>
+            <input type="text" class="form-control" id="phone" placeholder="(xxx) xxx-xxxx" title="Your phone number is required (10 digits)" required>
             </div>
-          </div>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Pet's Breed</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Please enter your pet's breed">
-          </div>
-        </div>
         <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Service</legend>
-            <div class="col-sm-10">
+            <label class="form-label"><b>Services</b></label>
+            <div >
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                <label class="form-check-label" for="gridRadios1">
+                <input class="form-check-input" type="checkbox" name="service[]" id="flexCheckChecked" value="option1">
+                <label class="form-check-label" for="flexCheckChecked">
                   Vaccines ($30)
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
+                <input class="form-check-input" type="checkbox" name="service[]" id="flexCheckChecked" value="option2">
+                <label class="form-check-label" for="flexCheckChecked">
                   Surgery ($750)
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                <label class="form-check-label" for="gridRadios3">
+                <input class="form-check-input" type="checkbox" name="service[]" id="flexCheckChecked" value="option3">
+                <label class="form-check-label" for="flexCheckChecked">
                   Radiology ($500)
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
-                <label class="form-check-label" for="gridRadios4">
+                <input class="form-check-input" type="checkbox" name="service[]" id="flexCheckChecked" value="option4">
+                <label class="form-check-label" for="flexCheckChecked">
                   Euthunasia ($300)
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option5">
-                <label class="form-check-label" for="gridRadios5">
+                <input class="form-check-input" type="checkbox" name="service[]" id="flexCheckChecked" value="option5">
+                <label class="form-check-label" for="flexCheckChecked">
                   Dental ($600)
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6" value="option6">
-                <label class="form-check-label" for="gridRadios6">
+                <input class="form-check-input" type="checkbox" name="service[]" id="flexCheckChecked" value="option6">
+                <label class="form-check-label" for="flexCheckChecked">
                   Medical Grooming ($35)
                 </label>
               </div>
             </div>
-          </div>
+          
         </fieldset>
         <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Doctor Preference</label>
+          <label for="doctors" class="col-sm-2 col-form-label"><b>Doctor Preference</b></label>
           <div class="col-sm-10">
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+            <select name= "doctors" class="custom-select my-1 mr-sm-2" id="doctors" >
               <option selected>None</option>
               <option value="1">Dr. Emad</option>
               <option value="2">Dr. Sara</option>
@@ -299,15 +297,45 @@
             </select>
           </div>
         </div>
-        <div class="form-group row">
-          <div class="col-sm-2">Date and Time</div>
+
+        <!-- <div class="form-group row">
+          <label class="form-label" class="col-sm-2 col-form-label"><b>Choose a date</b></label>
           <div class="col-sm-10">
-            <input class="form-control" type="datetime-local" id="example-datetime-local-input" placeholder="yyyy-mm-dd, --:-- --">
+            <input type="text" id="dateInput" placeholder="dd/mm/yyyy">
           </div>
-        </div>
-        <div class="form-group row">
+        </div> -->
+
+       <div class="form-group row">
+        <div class="form-label"> 
+        <p><b>Choose a date </b> <br><input type="text" id="dateInput" placeholder="dd/mm/yyyy"></p>
+     </div>
+     </div>
+     <div class="form-group row">
+        <div class="form-label">
+        <p><b>Choose a time</b><br><input type="time" id="timeInput"placeholder="--:-- --"></p>
+    </div>
+    </div>
+    <div class="form-group row">
+     <p><b>Credit Card </b><br><input type="text" id="debit" title="Your credit card number is required (16 caracteres)"></p>
+    </div>
+
+        <!-- <div class="form-group row">
+          <label class="form-label" class="col-sm-2 col-form-label"><b>Choose a time</b></label>
           <div class="col-sm-10">
-            <button type="submit" class="btn btn-success">Confirm</button>
+            <input type="time" id="timeInput" placeholder="--:-- --">
+          </div>
+        </div> -->
+
+        <!-- <div class="form-group row">
+          <label class="form-label" class="col-sm-2 col-form-label"><b>Credit Card</b></label>
+          <div class="col-sm-10">
+            <input type="text" id="debit" title="Your credit card number is required (16 caracteres)" placeholder="xxxx xxxx xxxx xxxx">
+          </div> -->
+        </div>
+          <div class="form-row">
+              <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-success" onclick="return servicesSelect()" >Confirm</button>
+
           </div>
         </div>
       </form>
@@ -315,7 +343,8 @@
   </section>
 
   <div id="footer">
-    <img class= "resize" src="images/logo.png" width="30" height="100"> <br/> Website Designed by Maryan Khalil</p>
+    <!-- <img class= "resize" src="images/logo.png" width="30" height="100">  -->
+   Website Designed by Maryan Khalil
   </div>
 
 </body>
