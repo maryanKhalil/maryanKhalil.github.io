@@ -1,7 +1,7 @@
 function confirmBooking() {
     var day = document.getElementById("dateInput").value;
     var time = document.getElementById("timeInput").value.split(':'),hours, minutes, midi;
-    var pet = documnet.getElementById("petname").value;
+    var pet = document.getElementById("petname").value;
     hours = time[0];
     minutes = time[1];
     if (hours > 12) {
@@ -17,7 +17,7 @@ function confirmBooking() {
     }
     
   alert("Success! Your appointment was taken with " + $("#doctors option:selected").text() +
-    " on " + day + " at " + hours + ':' + minutes + ' ' + midi + "We can not wait to meet " + pet);
+    " on " + day + " at " + hours + ':' + minutes + ' ' + midi + ". We can not wait to meet " + pet + "!");
   }
   
   var unavailableDates = ["06/29/2020", "07/07/2020", "07/10/2020"];
