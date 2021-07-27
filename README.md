@@ -1,6 +1,6 @@
 # Web page templates created for user interface analysis
 
-### github.io links to different templates
+### Github.io links to different templates
 <ul>
  
 ###### <li> [Survey template](https://maryankhalil.github.io/seg3125-Module1-Survey/)</li>
