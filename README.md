@@ -1,6 +1,6 @@
 # maryanKhalil.github.io
 
-# Web page templates made for user interface analysis
+## Web page templates made for user interface analysis
 
 ### github.io links to different templates
 
