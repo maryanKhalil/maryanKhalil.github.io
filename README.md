@@ -1,7 +1,8 @@
 # Web page templates created for user interface analysis
 
 ### github.io links to different templates
- <ul>
+<ul>
+ 
 ###### <li> [Survey template](https://maryankhalil.github.io/seg3125-Module1-Survey/)</li>
 
 ###### <li> [Simple grocery store template](https://maryankhalil.github.io/SEG3125-Module2-Grocery/)</li>
